@@ -59,6 +59,7 @@ figcaption {
 .ordernow__text {
   line-height: 0.9;
   margin: auto 0;
+  text-align: center;
 }
 
 .ordernow__text-top {
@@ -68,7 +69,7 @@ figcaption {
 
 .ordernow__text-mid {
   margin: 0;
-  font-size: 8.75rem;
+  font-size: 9rem;
   color: #F9D63F;
 }
 
