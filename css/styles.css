@@ -55,6 +55,20 @@ figcaption {
   flex-direction: row;
 }
 
+.gears {
+  background-color: #A41F25;
+  background-image: url("../assets/images/Gears_15.jpg");
+  background-repeat: no-repeat;
+  background-position: 800px 75%;
+  color: white;
+  padding: 20px;
+}
+
+.gears__title {
+  color: #FFCD2F;
+  margin-top: 0;
+}
+
 .delivery__image {
   float: right;
 }
@@ -62,7 +76,7 @@ figcaption {
 .trees {
   background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0)), url("../assets/images/TransparentArrowBkgd.jpg");
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
 }
 
 .arrow-transparent {
