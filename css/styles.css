@@ -36,9 +36,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   color: white;
-  height: 450px;
-  font-size: 1.5rem;
-  padding-top: 20px;
+  /* height: 450px; */
+  font-size: 1.5em;
+  padding: 20px 0 150px;
 }
 
 .title {
@@ -50,7 +50,7 @@ body {
     rgba(255,255,255,0.7),
     rgba(196,154,108,0));
   color: #A41F25;
-  font-size: 3.5rem;
+  font-size: 2em;
   line-height: 1;
 }
 
@@ -70,7 +70,7 @@ body {
     rgba(195, 155, 124, 1),
     rgba(196, 154, 108, 0));
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.4em;
 }
 
 .chocolate__figures {
@@ -78,7 +78,12 @@ body {
   flex-direction: row;
 }
 
+.chocolate__figure {
+  margin: 20px;
+}
+
 .chocolate__image {
+  margin: 0 auto;
   max-width: 250px;
   width: 100%;
 }
@@ -121,7 +126,7 @@ figcaption {
 }
 
 .parallax__title {
-  font-size: 3rem;
+  font-size: 3em;
   line-height: 1.2;
 }
 
@@ -132,23 +137,32 @@ figcaption {
 .brownbar {
   background-color: #3D1C0F;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: flex-end;
-  height: 300px;
+  height: 250px;
   width: 80%;
   overflow: visible;
 }
 
+.brownbar__figure {
+  margin: 0;
+  position: relative;
+  top: -20%;
+  left: 5%;
+}
+
 .brownbar__image {
-  position: absolute;
-  margin-top: -30px;
-  left: 10%;
-  max-height: 380px;
+  /* position: relative; */
+  /* margin-top: -40px; */
+  /* left: 10%; */
+  max-width: 80%;
+  height: auto;
 }
 
 .brownbar__text {
+  float: right;
   color: white;
-  padding: 30px;
+  padding: 10px;
   width: 550px;
   letter-spacing: 1.5px;
 }
@@ -172,8 +186,15 @@ figcaption {
   margin-top: 0;
 }
 
+.guarantee__image {
+  max-width: 841px;
+  width: 100%;
+}
+
 .delivery__image {
   float: right;
+  max-width: 100%;
+  height: auto;
 }
 
 .trees {
@@ -197,6 +218,12 @@ figcaption {
   padding: 50px;
 }
 
+.ordernow__image {
+  /* max-width: 110px; */
+  max-width: 100%;
+  height: auto;
+}
+
 .ordernow__text {
   line-height: 0.9;
   margin: auto 0;
@@ -205,23 +232,24 @@ figcaption {
 
 .ordernow__text-top {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 .ordernow__text-mid {
   margin: 0;
-  font-size: 9rem;
+  font-size: 9em;
   color: #F9D63F;
 }
 
 .ordernow__text-bot {
   margin: 0;
-  font-size: 4rem;
+  font-size: 4em;
 }
 
 .arrow__point {
   margin-bottom: 20px;
   max-width: 900px;
+  width: 100%;
 }
 
 .addtocart__btn {
@@ -230,19 +258,19 @@ figcaption {
   background-color: #E47E25;
   border: 4px solid white;
   font-family: 'Open Sans Condensed', sans-serif;
-  padding: 5px 120px 5px;
+  padding: 5px 120px;
 }
 
 .addtocart__title {
   color: white;
-  font-size: 3.5rem;
+  font-size: 3.5em;
   display: block;
   line-height: 1;
 }
 
 .addtocart__subtitle {
   color: black;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .productlabel__link,
@@ -258,8 +286,69 @@ figcaption {
 
 .copyright {
   color: rgba(255,255,255,0.7);
-  font-size: 0.7rem;
+  font-size: 0.7em;
   max-width: 55%;
   margin: 0 auto;
   padding-bottom: 20px;
+}
+
+
+@media screen and (max-width: 999px) {
+  .ordernow__image:first-of-type,
+  .ordernow__image:last-of-type {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .chocolate__figures {
+    flex-direction: column;
+  }
+
+  .chocolate__figure {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  chocolate__image {
+    margin-right: 10px;
+  }
+
+  .ordernow__image:nth-of-type(3) {
+    display: none;
+  }
+
+  .addtocart__btn {
+    padding: 5px 20px;
+  }
+
+  .copyright {
+    max-width: 80%
+  }
+}
+
+@media screen and (max-width: 549px) {
+  body {
+    font-size: 14px;
+  }
+
+  .chocolate__figure {
+    flex-direction: column;
+  }
+
+  .brownbar {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .brownbar__image {
+    display: none;
+  }
+
+  .ordernow__image {
+    display: none;
+  }
+
+  
 }
