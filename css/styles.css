@@ -109,6 +109,7 @@ figcaption {
   background-image: url("../assets/images/ParallaxOne_5.jpg");
   background-attachment: fixed;
   background-size: cover;
+  background-position: 50%;
   background-repeat: no-repeat;
 }
 
@@ -124,14 +125,32 @@ figcaption {
   line-height: 1.2;
 }
 
+.doctor {
+  padding: 50px 50px 0 0;
+}
+
 .brownbar {
+  background-color: #3D1C0F;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  height: 300px;
+  width: 80%;
+  overflow: visible;
+}
+
+.brownbar__image {
+  position: absolute;
+  margin-top: -30px;
+  left: 10%;
+  max-height: 380px;
 }
 
 .brownbar__text {
-  background-color: #3D1C0F;
   color: white;
+  padding: 30px;
+  width: 550px;
+  letter-spacing: 1.5px;
 }
 
 .underdoc {
