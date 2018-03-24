@@ -55,6 +55,11 @@ figcaption {
   flex-direction: row;
 }
 
+.underdoc {
+  line-height: 2;
+  padding: 20px;
+}
+
 .gears {
   background-color: #A41F25;
   background-image: url("../assets/images/Gears_15.jpg");
