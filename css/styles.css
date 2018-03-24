@@ -1,3 +1,7 @@
+html {
+  margin-top: 0;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
@@ -16,7 +20,7 @@ body {
   width: 80%;
   max-width: 900px;
   margin: 0 auto;
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 
 .innersection p,
@@ -27,15 +31,56 @@ body {
 
 .header {
   text-align: center;
+  background-image: url("../assets/images/HeadlineImage_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  height: 450px;
+  font-size: 1.5rem;
+  padding-top: 20px;
+}
+
+.title {
+  background: linear-gradient(
+    to right,
+    rgba(196,154,108,0),
+    rgba(255,255,255,0.7),
+    rgba(195,155,124,1),
+    rgba(255,255,255,0.7),
+    rgba(196,154,108,0));
+  color: #A41F25;
+  font-size: 3.5rem;
+  line-height: 1;
 }
 
 .header h1 {
+  margin: 0;
   font-family: 'rift', 'Open Sans', sans-serif;
 }
 
-.figures__area {
+.header h2 {
+  margin: 0;
+}
+
+.chocolate {
+  background: linear-gradient(
+    to right,
+    rgba(196, 154, 108, 0),
+    rgba(195, 155, 124, 1),
+    rgba(196, 154, 108, 0));
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.chocolate__figures {
   display: flex;
   flex-direction: row;
+}
+
+.chocolate__image {
+  max-width: 250px;
+  width: 100%;
 }
 
 figcaption {
