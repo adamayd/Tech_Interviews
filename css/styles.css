@@ -5,10 +5,22 @@ body {
   color: black;
   font-size: 18px;
   line-height: 1.6;
+  margin: 0;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+.innersection {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.innersection p {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .header {
@@ -46,6 +58,17 @@ figcaption {
   float: right;
 }
 
+.trees {
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0)), url("../assets/images/TransparentArrowBkgd.jpg");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
+
+.arrow-transparent {
+  background-color: rgba(255,255,255, 0.7);
+  padding-bottom: 20px;
+}
+
 .ordernow {
   font-family: 'Open Sans Condensed', sans-serif;
   color: white;
@@ -76,4 +99,49 @@ figcaption {
 .ordernow__text-bot {
   margin: 0;
   font-size: 4rem;
+}
+
+.arrow__point {
+  margin-bottom: 20px;
+  max-width: 900px;
+}
+
+.addtocart__btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #E47E25;
+  border: 4px solid white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 5px 120px 5px;
+}
+
+.addtocart__title {
+  color: white;
+  font-size: 3.5rem;
+  display: block;
+  line-height: 1;
+}
+
+.addtocart__subtitle {
+  color: black;
+  font-size: 1rem;
+}
+
+.productlabel__link,
+.productlabel__link:visited,
+.productlabel__link:hover,
+.productlabel__link:active {
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #2BB673;
+  padding: 5px;
+  display: block;
+}
+
+.copyright {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.7rem;
+  max-width: 55%;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
