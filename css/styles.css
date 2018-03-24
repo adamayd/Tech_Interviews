@@ -16,6 +16,7 @@ body {
   width: 80%;
   max-width: 900px;
   margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 .innersection p,
@@ -41,9 +42,18 @@ figcaption {
   text-align: center;
 }
 
+.standout {
+  padding: 20px;
+}
+
 .shutdown__list {
   font-style: italic;
   list-style: none;
+  padding-left: 20px;
+}
+
+.shutdown__list li {
+  padding: 10px 0;
 }
 
 .shutdown__list li:before {
