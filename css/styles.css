@@ -50,9 +50,33 @@ figcaption {
   content: "✓ ";
 }
 
+.parallax {
+  background-image: url("../assets/images/ParallaxOne_5.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.parallax__text {
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  padding: 50px;
+  max-width: 80%;
+}
+
+.parallax__title {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
 .brownbar {
   display: flex;
   flex-direction: row;
+}
+
+.brownbar__text {
+  background-color: #3D1C0F;
+  color: white;
 }
 
 .underdoc {
