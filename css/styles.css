@@ -88,6 +88,11 @@ body {
   width: 100%;
 }
 
+.chocolate__image:hover {
+  transform: scale(1.1);
+  transition: all 0.35s ease-in-out;
+}
+
 figcaption {
   text-align: center;
 }
@@ -135,8 +140,16 @@ figcaption {
 }
 
 .brownbar {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateX(-30%) scale(0.95);
   background-color: #3D1C0F;
   width: 80%;
+}
+
+.js-brownbar-slide {
+  transform: translateX(0) scale(1);
+  opacity: 1;
 }
 
 .brownbar__area {
@@ -179,8 +192,16 @@ figcaption {
 }
 
 .guarantee__image {
+  transform: scale(0.3);
+  opacity: 0;
+  transition: all 0.5s;
   max-width: 841px;
   width: 100%;
+}
+
+.js-guarantee__image-popin {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .delivery__image {
@@ -250,6 +271,14 @@ figcaption {
   border: 4px solid white;
   font-family: 'Open Sans Condensed', sans-serif;
   padding: 5px 120px;
+}
+
+.addtocart__btn:focus {
+  outline: none;
+}
+
+.addtocart__btn:hover {
+  background-color: #F77E25
 }
 
 .addtocart__title {
