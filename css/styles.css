@@ -119,7 +119,7 @@ figcaption {
   background-image: url("../assets/images/ParallaxOne_5.jpg");
   background-attachment: fixed;
   background-size: cover;
-  background-position: 50%;
+  background-position: 60%;
   background-repeat: no-repeat;
 }
 
@@ -236,6 +236,10 @@ figcaption {
   height: auto;
 }
 
+.ordernow:hover .ordernow__image {
+  animation: shake 0.5s;
+}
+
 .ordernow__text {
   line-height: 0.9;
   margin: auto 0;
@@ -312,11 +316,26 @@ figcaption {
   padding-bottom: 20px;
 }
 
+@keyframes shake {
+  0% { transform: rotate(-1deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+  75% { transform: rotate(1deg); }
+  100% { transform: rotate(0deg); }
+}
 
 @media screen and (max-width: 999px) {
   .ordernow__image:first-of-type,
   .ordernow__image:last-of-type {
     display: none;
+  }
+
+  .parallax {
+    background-position: 70%;
+  }
+
+  .brownbar {
+    width: 95%;
   }
 }
 
@@ -396,10 +415,6 @@ figcaption {
     font-style: normal;
   }
 
-  .parallax {
-    background-position-x: 70%;
-  }
-
   .doctor {
     padding: 0;
   }
@@ -425,6 +440,5 @@ figcaption {
   .ordernow__image {
     display: none;
   }
-
   
 }
