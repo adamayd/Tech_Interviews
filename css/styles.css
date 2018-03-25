@@ -136,34 +136,26 @@ figcaption {
 
 .brownbar {
   background-color: #3D1C0F;
-  display: flex;
-  /* flex-direction: row; */
-  justify-content: flex-end;
-  height: 250px;
   width: 80%;
-  overflow: visible;
 }
 
-.brownbar__figure {
-  margin: 0;
-  position: relative;
-  top: -20%;
-  left: 5%;
+.brownbar__area {
+  padding-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .brownbar__image {
-  /* position: relative; */
-  /* margin-top: -40px; */
-  /* left: 10%; */
-  max-width: 80%;
-  height: auto;
+  margin: -40px 80px -40px 80px;
+  max-width: 320px;
+  width: 40%;
+  height: 100%;
 }
 
 .brownbar__text {
-  float: right;
   color: white;
-  padding: 10px;
-  width: 550px;
+  max-width: 550px;
   letter-spacing: 1.5px;
 }
 
@@ -219,7 +211,6 @@ figcaption {
 }
 
 .ordernow__image {
-  /* max-width: 110px; */
   max-width: 100%;
   height: auto;
 }
@@ -315,6 +306,14 @@ figcaption {
     margin-right: 10px;
   }
 
+  .brownbar__area {
+    flex-direction: column;
+  }
+
+  .brownbar__text {
+    margin: 50px 0 0 80px;
+  }
+
   .gears {
     background-position-x: 450px;
   }
@@ -372,9 +371,18 @@ figcaption {
     background-position-x: 70%;
   }
 
+  .doctor {
+    padding: 0;
+  }
+
   .brownbar {
     width: 100%;
-    margin-right: 0;
+  }
+
+  .brownbar__text {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
   }
 
   .brownbar__image {
