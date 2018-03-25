@@ -315,6 +315,10 @@ figcaption {
     margin-right: 10px;
   }
 
+  .gears {
+    background-position-x: 450px;
+  }
+
   .ordernow__image:nth-of-type(3) {
     display: none;
   }
@@ -333,8 +337,39 @@ figcaption {
     font-size: 14px;
   }
 
+  .header {
+    padding-bottom: 20px;
+  }
+
+  .header h2:last-of-type {
+    display: none;
+  }
+
+  .tweener {
+    display: none;
+  }
+
   .chocolate__figure {
     flex-direction: column;
+  }
+
+  .chocolate__figure figcaption {
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .chocolate__figure:last-of-type figcaption {
+    font-style: italic;
+  }
+
+  .chocolate__figure:last-of-type figcaption:after {
+    content: "?";
+    font-style: normal;
+  }
+
+  .parallax {
+    background-position-x: 70%;
   }
 
   .brownbar {
@@ -344,6 +379,10 @@ figcaption {
 
   .brownbar__image {
     display: none;
+  }
+
+  .gears {
+    background-position-x: 250px;
   }
 
   .ordernow__image {
