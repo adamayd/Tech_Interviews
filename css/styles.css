@@ -302,8 +302,8 @@ figcaption {
     align-items: center;
   }
 
-  chocolate__image {
-    margin-right: 10px;
+  .chocolate__image {
+    margin: 0 10px 0 0;
   }
 
   .brownbar__area {
