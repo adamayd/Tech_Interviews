@@ -20,7 +20,7 @@ function brownBarSlide() {
   const realHeight = brownBar.offsetTop - 500
   if (window.scrollY >= realHeight) {
     window.removeEventListener('scroll', brownBarSlide)
-    brownBar.classList.add('js-brownbar-slide')
+    brownBar.classList.add('js-brownbar--slide')
   }
 }
 
@@ -28,7 +28,7 @@ function guarImagePop() {
   const realHeight = guarImage.offsetTop - 500
   if (window.scrollY >= realHeight) {
     window.removeEventListener('scroll', guarImagePop)
-    guarImage.classList.add('js-guarantee__image-popin')
+    guarImage.classList.add('js-guarantee__image--popin')
   }
 }
 
