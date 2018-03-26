@@ -86,11 +86,11 @@ body {
   margin: 0 auto;
   max-width: 250px;
   width: 100%;
+  transition: all 0.35s ease-in-out;
 }
 
 .chocolate__image:hover {
   transform: scale(1.1);
-  transition: all 0.35s ease-in-out;
 }
 
 figcaption {
