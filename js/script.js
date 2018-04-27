@@ -1,5 +1,7 @@
-const brownBar = document.querySelector('.brownbar');
-const guarImage = document.querySelector('.guarantee__image');
+const selectBrownBar = 'brownbar';
+const selectGuarImage = 'guarantee__image';
+const brownBar = document.querySelector(`.${selectBrownBar}`);
+const guarImage = document.querySelector(`.${selectGuarImage}`);
 
 function debounce(func, wait = 20, immediate = true) {
   var timeout;
@@ -16,21 +18,26 @@ function debounce(func, wait = 20, immediate = true) {
   };
 }
 
-function brownBarSlide() {
-  const realHeight = brownBar.offsetTop - 500
+// function brownBarSlide() {
+//   const realHeight = brownBar.offsetTop - 500
+//   if (window.scrollY >= realHeight) {
+//     window.removeEventListener('scroll', brownBarSlide)
+//     brownBar.classList.add('js-brownbar--slide')
+//   }
+// }
+
+function animateOnScroll(elementToMove, origSelector) {
+  // console.log(elementToMove);
+  const realHeight = elementToMove.offsetTop - 500
   if (window.scrollY >= realHeight) {
-    window.removeEventListener('scroll', brownBarSlide)
-    brownBar.classList.add('js-brownbar--slide')
+    console.log('trying to remove event listener')
+    console.log(elementToMove, origSelector)
+    window.removeEventListener('scroll', () => animateOnScroll(brownBar, selectBrownBar));
+    elementToMove.classList.add(`js-${origSelector}`)
   }
 }
 
-function guarImagePop() {
-  const realHeight = guarImage.offsetTop - 500
-  if (window.scrollY >= realHeight) {
-    window.removeEventListener('scroll', guarImagePop)
-    guarImage.classList.add('js-guarantee__image--popin')
-  }
-}
-
-window.addEventListener('scroll', debounce(brownBarSlide));
-window.addEventListener('scroll', debounce(guarImagePop));
+// window.addEventListener('scroll', debounce(animateOnScroll(brownBar)));
+// window.addEventListener('scroll', debounce(animateOnScroll(guarImage)));
+window.addEventListener('scroll', () => animateOnScroll(brownBar, selectBrownBar));
+window.addEventListener('scroll', () => animateOnScroll(guarImage, selectGuarImage));
