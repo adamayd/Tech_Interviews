@@ -18,7 +18,20 @@ function debounce(func, wait = 20, immediate = true) {
   };
 }
 
+// function debounceEvent (callback, time) {
+//   let interval;
+//   console.log('debouncing')
+//   return (...args) => {
+//     clearTimeout(interval);
+//     interval = setTimeout(() => {
+//       interval = null;
+//       callback(...args);
+//     }, time)
+//   }
+// 
+
 function animateOnScroll(elementToMove, origSelector) {
+  console.log('am i debounced?')
   const realHeight = elementToMove.offsetTop - 500;
   if (window.scrollY >= realHeight) {
     window.removeEventListener('scroll', arguments[2]);
@@ -26,7 +39,7 @@ function animateOnScroll(elementToMove, origSelector) {
   }
 }
 
-const funcBrown = () => animateOnScroll(brownBar, selectBrownBar, funcBrown);
-window.addEventListener('scroll', debounce(funcBrown));
-const funcGuar = () => animateOnScroll(guarImage, selectGuarImage, funcGuar);
-window.addEventListener('scroll', debounce(funcGuar));
+const funcBrown = debounce(() => animateOnScroll(brownBar, selectBrownBar, funcBrown));
+window.addEventListener('scroll', funcBrown);
+const funcGuar = debounce(() => animateOnScroll(guarImage, selectGuarImage, funcGuar));
+window.addEventListener('scroll', funcGuar);
