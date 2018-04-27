@@ -18,26 +18,15 @@ function debounce(func, wait = 20, immediate = true) {
   };
 }
 
-// function brownBarSlide() {
-//   const realHeight = brownBar.offsetTop - 500
-//   if (window.scrollY >= realHeight) {
-//     window.removeEventListener('scroll', brownBarSlide)
-//     brownBar.classList.add('js-brownbar--slide')
-//   }
-// }
-
 function animateOnScroll(elementToMove, origSelector) {
-  // console.log(elementToMove);
-  const realHeight = elementToMove.offsetTop - 500
+  const realHeight = elementToMove.offsetTop - 500;
   if (window.scrollY >= realHeight) {
-    console.log('trying to remove event listener')
-    console.log(elementToMove, origSelector)
-    window.removeEventListener('scroll', () => animateOnScroll(brownBar, selectBrownBar));
-    elementToMove.classList.add(`js-${origSelector}`)
+    window.removeEventListener('scroll', arguments[2]);
+    elementToMove.classList.add(`js-${origSelector}`);
   }
 }
 
-// window.addEventListener('scroll', debounce(animateOnScroll(brownBar)));
-// window.addEventListener('scroll', debounce(animateOnScroll(guarImage)));
-window.addEventListener('scroll', () => animateOnScroll(brownBar, selectBrownBar));
-window.addEventListener('scroll', () => animateOnScroll(guarImage, selectGuarImage));
+const funcBrown = () => animateOnScroll(brownBar, selectBrownBar, funcBrown);
+window.addEventListener('scroll', debounce(funcBrown));
+const funcGuar = () => animateOnScroll(guarImage, selectGuarImage, funcGuar);
+window.addEventListener('scroll', debounce(funcGuar));
